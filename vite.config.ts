@@ -4,6 +4,11 @@ import { UserConfig } from 'vite'
 
 const config: UserConfig = {
   plugins: [react(), ssr()],
+  server: {
+    hmr: {
+      overlay: false
+    }
+  }
 }
 
 export default config

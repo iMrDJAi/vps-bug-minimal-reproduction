@@ -11,18 +11,7 @@ function PageShell({ children, pageContext }: { children: React.ReactNode; pageC
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <Layout>
-          <Sidebar>
-            <Logo />
-            <Link className="navitem" href="/">
-              Home
-            </Link>
-            <Link className="navitem" href="/about">
-              About
-            </Link>
-          </Sidebar>
-          <Content>{children}</Content>
-        </Layout>
+        <Content>{children}</Content>
       </PageContextProvider>
     </React.StrictMode>
   )
